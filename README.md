@@ -1,9 +1,13 @@
 # Nome do Projeto: Integra-o-API-RDSM---App-X
 # Objetivo do projeto: Decrição das APIs consumidas pela integração 
 
-## Descrição do Projeto
+## Descrição do Aplicativo
 
-[Descrição detalhada do projeto e sua finalidade]
+[Descrição detalhada do aplicativo e sua finalidade]
+
+## O que a integração faz
+
+[Descrição detalhada do aplicativo e sua finalidade]
 
 ## Endpoints da API Consumidos
 
@@ -45,10 +49,10 @@
 | API de Segmentações   | [Consultar contatos de uma segmentação](https://developers.rdstation.com/reference/get_platform-segmentations-id-contacts)  | Retorna uma lista de contatos associados a uma segmentação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Fluxo de Automação   | [Consultar fluxos de automação](https://developers.rdstation.com/reference/get_platform-workflows)  | Retorna uma lista com os fluxos de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Fluxo de Automação   | [Consultar dados de um fluxo a partir de um id](https://developers.rdstation.com/reference/get_platform-workflows-id)  | Retorna informações das ações de um fluxo de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
-| API de Fluxo de Automação   | [Inserir leads em um fluxo](https://developers.rdstation.com/reference/post_platform-workflows-id-leads)  | Permite inserir leads num fluxo de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>[x] item1</li><li>[ ] item2</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
+| API de Fluxo de Automação   | [Inserir leads em um fluxo](https://developers.rdstation.com/reference/post_platform-workflows-id-leads)  | Permite inserir leads num fluxo de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>[x] Sim</li><li>[ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Fluxo de Automação   | [Consultar leads que iniciaram um fluxo](https://developers.rdstation.com/reference/get_platform-workflows-id-leads-started)  | Retorna uma lista com os leads que iniciaram um fluxo de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Fluxo de Automação   | [Consultar leads que encerraram um fluxo](https://developers.rdstation.com/reference/get_platform-workflows-id-leads-left)  | Retorna uma lista com os leads que encerraram um fluxo de automação. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
-| API de Fluxo de Automação   | [Consultar leads que atingiram uma ação específica de um fluxo](https://developers.rdstation.com/reference/get_platform-workflows-id-leads-action-action-id)  | Retorna uma lista com os leads que atingiram uma ação específica de um fluxo. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>[x] item1</li><li>[ ] item2</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
+| API de Fluxo de Automação   | [Consultar leads que atingiram uma ação específica de um fluxo](https://developers.rdstation.com/reference/get_platform-workflows-id-leads-action-action-id)  | Retorna uma lista com os leads que atingiram uma ação específica de um fluxo. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>[x] Sim</li><li>[ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Email   | [Listar todos os emails](https://developers.rdstation.com/reference/get_platform-emails)  | Consultar lista de emails. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Email   | [Buscar email por id](https://developers.rdstation.com/reference/get_platform-emails-id)  | Consultar lista de emails da conta. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
 | API de Landing Pages   | [Consultar landing pages](https://developers.rdstation.com/reference/get_platform-landing-pages)  | Retorna uma lista com todas as landing pages de uma conta. | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> | <ul><li>- [ ] Sim</li><li>- [ ] Não</li></ul> |
@@ -62,47 +66,73 @@
 
 ## Como a Aplicação Engatilha os Endpoints
 
-### Endpoint 1
+### Nome do Endpoint 1
 
 [Descreva aqui as ações ou eventos na plataforma que acionam o consumo do Endpoint 1]
+Ex: 
 
-### Endpoint 2
+>Ação (App): quando um card é movido para outra Etapa na plataforma.
+Evento (RD Station Marketing): é enviado uma requisição de "Atualização de Funis de Contatos pelo UUID/email do contato" alterando o Estágio do Funil do Lead e o Dono do Lead
 
-[Descreva aqui as ações ou eventos na plataforma que acionam o consumo do Endpoint 2]
+### Nome do Endpoint 2
 
-### Endpoint 3
+Ex: 
+>Ação (App): quando o contato é editado na plataforma. 
+>Evento (RD Station Marketing): é enviado uma requisição de "Atualizar contato pelo uuid/email" para criar ou atualizar o Lead no RD Station Marketing.
+
+### Nome do Endpoint 3
 
 [Descreva aqui as ações ou eventos na plataforma que acionam o consumo do Endpoint 3]
+Ex: 
+
+>Ação (App): quando uma Venda é marcada na plataforma.
+>Evento (RD Station Marketing): é enviado uma requisição de "Evento de Marcação de Oportunidade Ganha" para marcar uma Venda com o valor da Venda no RD Station Marketing.
 
 ...
 
 ## Conteúdo da Requisição de Cada Endpoint
 
-### Endpoint 1
+### Nome do Endpoint 1
 
 - Método HTTP: [GET/POST/PUT/DELETE]
-- URL: [URL completa do Endpoint 1]
-- Dados enviados na requisição:
-  - [Parâmetro 1]: [Descrição do parâmetro 1]
-  - [Parâmetro 2]: [Descrição do parâmetro 2]
-  - ...
+- URL: [URL completa do Endpoint]
+- Headers: [Headers utilizados]
+- Body da requisição: [Body da Requisição]
 
-### Endpoint 2
+Adicione um exemplo de requisição:
 
-- Método HTTP: [GET/POST/PUT/DELETE]
-- URL: [URL completa do Endpoint 2]
-- Dados enviados na requisição:
-  - [Parâmetro 1]: [Descrição do parâmetro 1]
-  - [Parâmetro 2]: [Descrição do parâmetro 2]
-  - ...
+```json
+{
 
-### Endpoint 3
+}
+```
+
+### Nome do Endpoint 2
 
 - Método HTTP: [GET/POST/PUT/DELETE]
-- URL: [URL completa do Endpoint 3]
-- Dados enviados na requisição:
-  - [Parâmetro 1]: [Descrição do parâmetro 1]
-  - [Parâmetro 2]: [Descrição do parâmetro 2]
-  - ...
+- URL: [URL completa do Endpoint]
+- Headers: [Headers utilizados]
+- Body da requisição: [Body da Requisição]
 
-...
+Adicione um exemplo de requisição:
+
+```json
+{
+
+}
+```
+
+### Nome do Endpoint 3
+
+- Método HTTP: [GET/POST/PUT/DELETE]
+- URL: [URL completa do Endpoint]
+- Headers: [Headers utilizados]
+- Body da requisição: [Body da Requisição]
+
+Adicione um exemplo de requisição:
+
+```json
+{
+
+}
+```
